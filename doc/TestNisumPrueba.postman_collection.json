@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "27e9d8c7-0a1d-47e3-a2d7-d73e58544908",
+		"name": "TestNisumPrueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13717250"
+	},
+	"item": [
+		{
+			"name": "Registrarse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Jaime Cruz\",\n  \"email\": \"jaime2496333@gmail.com\",\n  \"password\": \"jaime123\",\n  \"phones\": [\n    {\n      \"number\": \"78104754\",\n      \"cityCode\": \"10000\",\n      \"countryCode\": \"505\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/user/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Loguearse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"jaime2496333@gmail.com\",\n  \"password\": \"jaime123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/user/signin"
+			},
+			"response": []
+		},
+		{
+			"name": "ListaUsuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZGdld2wyQGdtYWlsLmNvbSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn1dLCJpYXQiOjE2NDM2OTg4MzIsImV4cCI6MTY0NjI5MDgzMn0.nqGpGPdntzShNhVOkG-dzjTydxU66im_L2XP7hIBN-g",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8080/api/v1/users"
+			},
+			"response": []
+		},
+		{
+			"name": "ListaRoles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZGdld2wyQGdtYWlsLmNvbSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn1dLCJpYXQiOjE2NDM3MDExODUsImV4cCI6MTY0NjI5MzE4NX0.a-awCB5FqXKL6QVs2uaeP4twurIgAC1RV5cto-99mnE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/roles"
+			},
+			"response": []
+		}
+	]
+}
